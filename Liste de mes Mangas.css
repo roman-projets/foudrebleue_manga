@@ -1,0 +1,792 @@
+body {
+    background-image: url(fond.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+#en-tete {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    top: 65px;
+    right: 10px;
+    background: white;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.menu a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu_ordi {
+    position: absolute;
+    top: calc(93%);
+    right: 22%;
+    background: white;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+    z-index: 1000;
+}
+
+.menu_ordi a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+#documentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 30%;
+    height: 30%;
+    min-width: 140px;
+    max-width: 180px;
+    padding: 8px 14px;
+    background: white;
+    color: black;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+#documentation img {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+}
+
+.documentation-container {
+    position: fixed;
+    margin-top: 4%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+}
+
+#reload {
+    cursor: pointer;
+    width: 18%;
+    min-width: 40px;
+    z-index: 1000;
+}
+
+#compteur {
+    margin-left: 1%;
+}
+
+h1 {
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    text-align: center;
+    font-size: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: azure;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+#searchFilter {
+    width: 350px;
+    max-width: 80%;
+    padding: 12px 20px;
+    border: 3px solid white;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#searchFilter::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#searchFilter:focus {
+    width: 420px;
+    border: 4px solid white;
+    box-shadow:
+        5px 5px 0 black,
+        0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+#aucunResultat {
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    color: azure;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+#buttonFilter {
+    display: flex;
+    gap: 20px;
+}
+
+#favoris {
+    padding: 12px 20px;
+    border: 3px solid white;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #d81b60, #8e24aa);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 5px;
+}
+
+#favoris:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px pink;
+}
+
+#favoris.actif {
+    background: #ff4d6d;
+    border-color: #ff4d6d;
+    box-shadow: 0 0 15px #ff4d6d;
+    transform: scale(1.05);
+}
+
+#absents {
+    padding: 12px 20px;
+    border: 3px solid white;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #8d6e63, #b08968);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#absents:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px brown;
+}
+
+#absents.actif {
+    background: brown;
+    border-color: brown;
+    box-shadow: 0 0 15px brown;
+    transform: scale(1.05);
+}
+
+#filter {
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#FilterVendre {
+    padding: 3px;
+    border-radius: 32px;
+    border-color: azure;
+    background-color: red;
+    border-width: 2px;
+    cursor: pointer;
+}
+
+#FilterLetter {
+    padding: 3px;
+    border-radius: 32px;
+    border-color: azure;
+    background-color: gold;
+    border-width: 2px;
+    cursor: pointer;
+}
+
+#editionFilter {
+    padding: 3px;
+    border-radius: 32px;
+    border-color: azure;
+    background-color: brown;
+    border-width: 2px;
+    cursor: pointer;
+}
+
+#typeFilter {
+    padding: 3px;
+    border-radius: 32px;
+    border-color: azure;
+    border-width: 2px;
+    background-color: rgb(201, 12, 201);
+    cursor: pointer;
+}
+
+button {
+    padding: 8px 15px;
+    border-radius: 70px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: #d63333;
+    color: white;
+}
+
+button.active {
+    background: #d63333;
+    color: white;
+}
+
+.manga-list {
+    color: azure;
+    font-size: 25px;
+}
+
+h2 {
+    margin-left: 1%;
+    color: azure;
+    display: flex;
+    align-items: center;
+}
+
+.developpe_manga {
+    width: 5%;
+    cursor: pointer;
+}
+
+.alpha {
+    font-size: 100px;
+    font-weight: bold;
+    text-decoration-line: overline;
+    color: azure;
+    margin-left: 5%;
+    margin-top: 2%;
+
+}
+
+.liste-tomes {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.masquer {
+    display: none;
+}
+
+.masquer.ouvert {
+    display: contents;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.align img {
+    color: azure;
+}
+
+.info_manga {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-color: white;
+    border-width: 10px;
+    border-radius: 32px;
+    border-style: ridge;
+    background: rgba(15, 23, 42, 0.1);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+.synopsis {
+    display: flex;
+    flex-direction: column;
+    color: azure;
+    padding: 5px
+}
+
+.a_lire {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.en_cours_de_lecture {
+    color: orangered;
+    font-weight: bold;
+    text-align: center;
+}
+
+.lu {
+    color: rgb(1, 255, 64);
+    font-weight: bold;
+    text-align: center;
+}
+
+.gris {
+    filter: grayscale(100%);
+}
+
+.filigrane {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-50deg);
+    font-size: 2rem;
+    color: red;
+    font-weight: bold;
+    letter-spacing: 3px;
+    pointer-events: none;
+    white-space: nowrap;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-style: double;
+}
+
+.filigraneimg {
+    position: relative;
+    display: inline-block;
+}
+
+.filigraneimg img {
+    display: block;
+}
+
+.separator {
+    text-align: center;
+    font-size: 24px;
+    color: #FF7FBF;
+    margin: 30px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 2px;
+}
+
+#expmlain {
+    color: azure;
+    font-size: 18px;
+}
+
+.masquer.ouvert {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.developpe_manga {
+    transition: transform 0.3s;
+}
+
+.developpe_manga.rotation {
+    transform: rotate(-180deg);
+}
+
+/* ---------- Tablettes ---------- */
+@media screen and (max-width: 1024px) {
+    body {
+        background-image: url(fond_tablette.png);
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+    #en-tete {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 18px;
+    }
+
+    .menu_ordi {
+        position: fixed;
+        top: 70px;
+        right: 95px;
+        width: 30%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .documentation-container {
+        position: fixed;
+        top: 12px;
+        right: 18px;
+        margin-top: 0;
+    }
+
+    #documentation {
+        width: auto;
+        min-width: 0;
+        max-width: none;
+        height: auto;
+        padding: 8px 12px;
+    }
+
+    #reload {
+        width: 60px;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    h1 {
+        font-size: clamp(42px, 5.5vw, 54px);
+        margin: 24px 12px;
+    }
+
+    .search-container {
+        width: 100%;
+        padding: 0 18px;
+        box-sizing: border-box;
+    }
+
+    #searchFilter,
+    #searchFilter:focus {
+        width: min(520px, 85%);
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #buttonFilter {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    #favoris,
+    #absents,
+    button {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+
+    #filter {
+        gap: 10px;
+        margin: 16px 12px;
+    }
+
+    #FilterVendre,
+    #FilterLetter,
+    #editionFilter,
+    #typeFilter {
+        max-width: 100%;
+        font-size: 15px;
+        padding: 7px 10px;
+    }
+
+    #compteur {
+        text-align: center;
+        margin: 12px 0;
+        font-size: 18px;
+    }
+
+    .manga-list {
+        font-size: 21px;
+    }
+
+    .alpha {
+        font-size: 76px;
+        margin-left: 3%;
+        margin-top: 3%;
+    }
+
+    h2 {
+        margin: 16px 2%;
+    }
+
+    .developpe_manga {
+        width: 7%;
+        min-width: 36px;
+    }
+
+    .info_manga {
+        margin: 12px 2%;
+        padding: 12px;
+        border-width: 7px;
+        border-radius: 26px;
+        box-sizing: border-box;
+    }
+
+    .liste-tomes,
+    .masquer.ouvert {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .align {
+        flex: 0 1 125px;
+        max-width: 140px;
+    }
+
+    .align img {
+        width: 110px;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .a_lire {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .en_cours_de_lecture {
+        color: orangered;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .lu {
+        color: rgb(1, 255, 64);
+        font-weight: bold;
+        text-align: center;
+    }
+
+
+    .synopsis {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .filigrane {
+        font-size: 1.35rem;
+        letter-spacing: 2px;
+        max-width: 90%;
+        white-space: nowrap;
+    }
+
+    .separator {
+        font-size: 21px;
+        letter-spacing: 1px;
+    }
+
+    #aucunResultat {
+        font-size: 23px;
+        padding: 0 16px;
+    }
+
+    #extraits_promotionnels {
+        width: 96%;
+        margin: 24px auto;
+        font-size: clamp(30px, 4vw, 38px);
+        line-height: 1.15;
+    }
+}
+
+/* ---------- Téléphones ---------- */
+@media screen and (max-width: 768px) {
+
+    body {
+        background-image: url(fond_tel.webp);
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+    #documentation {
+        display: none;
+    }
+
+    .menu_ordi {
+        display: none;
+    }
+
+    #en-tete {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 20px;
+        z-index: 1000;
+    }
+
+    #reload {
+        display: block;
+        position: fixed;
+        width: 60px;
+        right: 40%;
+        bottom: 5%;
+        z-index: 1000;
+    }
+
+    .menu-btn {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    #aucunResultat {
+        text-align: center;
+        font-size: 25px;
+        font-style: italic;
+        color: azure;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    }
+
+    #compteur {
+        text-align: center;
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    #searchFilter {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    #searchFilter:focus {
+        width: 95%;
+    }
+
+    #filter {
+        margin-left: 0;
+        gap: 10px;
+        width: 100%;
+    }
+
+    #FilterLetter,
+    #editionFilter,
+    #typeFilter,
+    button,
+    #favoris {
+        font-size: 14px;
+    }
+
+    .alpha {
+        font-size: 60px;
+        margin-left: 0;
+        margin-top: 10%;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .developpe_manga {
+        width: 18%;
+    }
+
+    .info_manga {
+        padding: 10px;
+    }
+
+    /* Tomes */
+    .liste-tomes {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .align img {
+        width: 120px;
+        height: auto;
+    }
+
+    .a_lire {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .en_cours_de_lecture {
+        color: orangered;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .lu {
+        color: rgb(1, 255, 64);
+        font-weight: bold;
+        text-align: center;
+    }
+
+
+    .synopsis {
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    .filigrane {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-50deg);
+        max-width: 90%;
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        white-space: nowrap;
+
+    }
+
+    .separator {
+        font-size: 18px;
+    }
+
+    #extraits_promotionnels {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 30px auto;
+        font-size: 40px;
+        line-height: 1.1;
+        margin-left: 0;
+    }
+
+}
