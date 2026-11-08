@@ -1,9 +1,3 @@
-function fermerProjet(fermer) {
-    if (fermer === 'projet') {
-        window.close();
-    }
-}
-
 function reload(re) {
     if (re === "rechargement") {
         location.reload();
