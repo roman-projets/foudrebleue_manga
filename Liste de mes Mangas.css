@@ -422,6 +422,48 @@ h2 {
     transform: rotate(-180deg);
 }
 
+/*-----------Style signature-foudrebleue------------*/
+.titre-mangatheque {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.signature-foudrebleue {
+    width: 32px;
+    height: 40px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 5px #36BFFF);
+    animation: foudre 2.5s infinite ease-in-out;
+}
+
+@keyframes foudre {
+
+    0%,
+    85%,
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 5px #36BFFF);
+    }
+
+    90% {
+        opacity: 0.45;
+        filter: drop-shadow(0 0 12px #36BFFF);
+    }
+
+    95% {
+        opacity: 1;
+        filter: drop-shadow(0 0 9px #FFFFFF);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .signature-foudrebleue {
+        animation: none;
+    }
+}
+
 /* ---------- Tablettes ---------- */
 @media screen and (max-width: 1024px) {
     body {
