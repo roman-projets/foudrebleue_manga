@@ -591,6 +591,10 @@ h2 {
         margin: 16px 2%;
     }
 
+    .extrait {
+        margin-left: 3%;
+    }
+
     .developpe_manga {
         width: 7%;
         min-width: 36px;
@@ -772,7 +776,10 @@ h2 {
         text-align: center;
     }
 
-
+    .extrait {
+        margin-left: 10%;
+        margin-bottom: 5%;
+    }
 
     .developpe_manga {
         width: 18%;
