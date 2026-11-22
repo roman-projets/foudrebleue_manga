@@ -281,6 +281,17 @@ h2 {
     align-items: center;
 }
 
+.extrait {
+    margin-left: 1.5%;
+    color: azure;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+    width: max-content;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif
+}
+
 .developpe_manga {
     width: 5%;
     cursor: pointer;
@@ -760,6 +771,8 @@ h2 {
         justify-content: center;
         text-align: center;
     }
+
+
 
     .developpe_manga {
         width: 18%;
