@@ -36,24 +36,15 @@ function menu_pc() {
     }
 }
 
-// function deploye(infos) {
-//     const chevron = document.querySelector(".developpe_manga");
-//     const plus = document.querySelector(".masquer");
-//     if (infos === 'plus') {
-//         plus.classList.toggle("ouvert");
-//         chevron.classList.toggle("rotation");
-//     }
-// }
 
 function deploye(titre) {
 
-    // Le chevron du titre cliqué
     const chevron = titre.querySelector(".developpe_manga");
 
-    // La liste de tomes située juste après le h2
-    const liste = titre.nextElementSibling;
+    // Recherche directement la liste des tomes
+    const liste = titre.parentElement.querySelector(".liste-tomes");
 
-    // Le bloc masqué contenu dans cette liste
+    // Récupération du bloc masqué
     const plus = liste.querySelector(".masquer");
 
     plus.classList.toggle("ouvert");
