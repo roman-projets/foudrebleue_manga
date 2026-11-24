@@ -284,22 +284,24 @@ h2 {
 .extrait_bloc {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
 }
 
 .extrait {
-    margin-left: 1.5%;
     color: azure;
     display: flex;
     align-items: center;
-    margin-bottom: 0.5%;
-    width: max-content;
-    font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;
-
+    flex-direction: row;
+    justify-content: center;
     text-decoration-line: none;
-    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
     transition: 0.3s ease;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 .extrait:hover {
