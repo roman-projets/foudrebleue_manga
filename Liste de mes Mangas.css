@@ -284,23 +284,23 @@ h2 {
 .extrait_bloc {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
     gap: 10px;
 }
 
 .extrait {
+    margin-left: 1.5%;
     color: azure;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    text-decoration-line: none;
+    margin-bottom: 0.5%;
+    width: max-content;
+    font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
+    flex-direction: row;
+    text-decoration-line: none;
+    font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s ease;
-    text-align: center;
     letter-spacing: 1px;
 }
 
@@ -793,9 +793,29 @@ h2 {
         text-align: center;
     }
 
+    .extrait_bloc {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
     .extrait {
-        margin-left: 10%;
-        margin-bottom: 7%;
+        color: azure;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-decoration-line: none;
+        font-weight: normal;
+        text-transform: none;
+        transition: 0.3s ease;
+        text-align: center;
+        /* letter-spacing: 1px; */
+        margin-bottom: 5%;
     }
 
     .developpe_manga {
