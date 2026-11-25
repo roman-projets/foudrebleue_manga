@@ -793,29 +793,15 @@ h2 {
         text-align: center;
     }
 
-    .extrait_bloc {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        gap: 10px;
-    }
-
     .extrait {
-        color: azure;
         display: flex;
         align-items: center;
-        flex-direction: row;
         justify-content: center;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        text-decoration-line: none;
-        font-weight: normal;
-        text-transform: none;
+        font-family: 'Courier New', Courier, monospace;
         transition: 0.3s ease;
         text-align: center;
-        /* letter-spacing: 1px; */
         margin-bottom: 5%;
+        margin-left: 20%;
     }
 
     .developpe_manga {
