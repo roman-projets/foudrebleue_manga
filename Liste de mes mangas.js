@@ -233,7 +233,7 @@ function compteurMangas() {
     });
 
     document.getElementById("compteur").innerHTML =
-        `•📚 ${total} Tomes <br> •📔 ${series} séries <br> •✔️ ${lus} Lus <br> •🔄 ${enCours} En cours <br> •📖 ${aLire} À lire`;
+        `📚 ${total} Tomes <br> 📔 ${series} séries <br> ✔️ ${lus} Lus <br> 🔄 ${enCours} En cours <br> 📖 ${aLire} À lire`;
 
     console.log({
         total,
